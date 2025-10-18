@@ -1,8 +1,8 @@
 import { createResource, For, Show } from "solid-js";
 import { useNavigate } from "@solidjs/router";
 
-import { fetchPublicChecks } from "../../api/check";
-import { EligibilityCheck } from "../project/manageBenefits/types";
+import { fetchPublicChecks } from "@/api/check";
+import { EligibilityCheck } from "@/types";
 
 
 const EligibilityChecksList = () => {

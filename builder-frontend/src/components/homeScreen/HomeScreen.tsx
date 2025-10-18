@@ -2,9 +2,10 @@ import { createSignal, Match, Switch } from "solid-js";
 import EligibilityChecksList from "./EligibilityChecksList";
 import ProjectsList from "./ProjectsList"
 import Header from "../Header";
+import DmnEditor from "./DmnEditor";
 
 const HomeScreen = () => {
-  const [screenMode, setScreenMode] = createSignal<"projects" | "checks">("projects");
+  const [screenMode, setScreenMode] = createSignal<"projects" | "checks">("checks");
   return (
     <div>
       <Header/>
@@ -27,7 +28,7 @@ const HomeScreen = () => {
           <ProjectsList />
         </Match>
         <Match when={screenMode() === "checks"}>
-          <EligibilityChecksList />
+          <DmnEditor />
         </Match>
       </Switch>
     </div>

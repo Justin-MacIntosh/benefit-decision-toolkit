@@ -7,7 +7,6 @@ import eligibilityCheckResource from "./eligibilityCheckResource";
 
 import type { EligibilityCheck } from "@/types";
 
-
 const EligibilityCheckDetail = () => {
   const { checkId } = useParams();
 
