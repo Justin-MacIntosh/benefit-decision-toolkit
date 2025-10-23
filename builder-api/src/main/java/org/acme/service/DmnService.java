@@ -9,5 +9,6 @@ public interface DmnService {
     public Map<String, Object> evaluateDecision(Screener screener, Map<String, Object> inputs) throws IOException;
     public String compilePublishedDmnModel(String screenerId) throws Exception;
     public void compileWorkingDmnModel(Screener screener) throws Exception;
+    public byte[] compileDmnModel(String dmnXml, Map<String, String> dependenciesMap, String modelId) throws IOException;
     public OptionalBoolean evaluateSimpleDmn(String dmnFilePath, String dmnModelName, Map<String, Object> inputs) throws Exception;
 }

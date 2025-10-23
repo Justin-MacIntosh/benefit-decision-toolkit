@@ -6,7 +6,6 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.NotFoundException;
 import org.acme.enums.OptionalBoolean;
 import org.acme.model.domain.DmnModel;
-import org.acme.model.domain.EligibilityCheck;
 import org.acme.model.domain.Screener;
 import org.acme.model.dto.Dependency;
 import org.acme.persistence.DmnModelRepository;
@@ -168,7 +167,7 @@ public class KieDmnService implements DmnService {
         return xmlOpt.get();
     }
 
-    private byte[] compileDmnModel(String dmnXml, Map<String, String> dependenciesMap, String modelId) throws IOException {
+    public byte[] compileDmnModel(String dmnXml, Map<String, String> dependenciesMap, String modelId) throws IOException {
         Log.info("Compiling and saving DMN model: " + modelId);
 
         KieServices kieServices = KieServices.Factory.get();
